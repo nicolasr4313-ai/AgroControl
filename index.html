@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>AgroControl</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>AgroControl 🚜</header>
+
+<div id="menu" class="pantalla activa">
+
+  <h2>📊 Panel General</h2>
+
+  <div class="card">
+    <h3>🐄 Total Animales</h3>
+    <p id="resumenGanado">0</p>
+  </div>
+
+  <div class="card">
+    <h3>🌾 Registros de Cosecha</h3>
+    <p id="resumenCosecha">0</p>
+  </div>
+
+  <div class="card">
+    <h3>💰 Ganancias Totales</h3>
+    <p id="resumenVentas">$0</p>
+  </div>
+
+  <button onclick="mostrar('ganado')">Ir a Ganado</button>
+  <button onclick="mostrar('cosecha')">Ir a Cosecha</button>
+  <button onclick="mostrar('ventas')">Ir a Ventas</button>
+
+</div>
+
+<div id="ganado" class="pantalla">
+  <h2>🐄 Ganado</h2>
+
+  <div class="card">
+    <h3 id="totalGanado">Total: 0</h3>
+  </div>
+
+  <input type="number" id="inputGanado" placeholder="Cantidad de animales">
+  <button onclick="agregarGanado()">Agregar</button>
+  <button onclick="volver()">⬅ Volver</button>
+
+  <ul id="listaGanado"></ul>
+</div>
+
+<div id="cosecha" class="pantalla">
+  <h2>🌾 Cosecha</h2>
+
+  <input type="text" id="inputCosecha" placeholder="Ej: Maíz 200kg">
+  <button onclick="agregarCosecha()">Agregar</button>
+  <button onclick="volver()">⬅ Volver</button>
+
+  <ul id="listaCosecha"></ul>
+</div>
+
+<div id="ventas" class="pantalla">
+  <h2>💰 Ventas</h2>
+
+  <input type="number" id="inputMonto" placeholder="Monto en $" />
+  <button onclick="agregarVentas()">Agregar</button>
+  <button onclick="volver()">⬅ Volver</button>
+
+  <div class="card">
+    <h3 id="totalVentas">Total: $0</h3>
+  </div>
+
+  <ul id="listaVentas"></ul>
+</div>
+
+<footer>AgroControl v3 🚀</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
